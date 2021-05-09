@@ -1,6 +1,6 @@
 // api preview script
 let o;
-const sourceGames = ['tf','csgo','l4d2','bms']
+const sourceGames = ['tf','csgo','l4d2','bms','srcTest']
 function main(){
 o = document.getElementById('out');
 GetApi()

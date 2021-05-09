@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const port = 8094;
-let servers = [];
+//let servers = [];
+let servers = [{"game":"srcTest","hostname":"127.0.0.1","port":"69","title":"redSrv"}];
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use((req, res, next) => {
@@ -49,4 +50,4 @@ if(Object.keys(req.body).length == conf.length){
 res.end();
 });
 
-app.listen(port, ()=>{console.log(`MatchTrak server listening on port ${port}`)});
+app.listen(port, "0.0.0.0", ()=>{console.log(`MatchTrak server listening on 0.0.0.0:${port}`)});
