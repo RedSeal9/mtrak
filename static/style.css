@@ -1,0 +1,5 @@
+body, pre, noline{background-color: rgb(44, 47, 51);color: #48a8d9;}
+pre,h1,h2,h3,h4,h5,h6{display:inline}
+error{color: rgb(179, 60, 60);}
+progress,::-webkit-progress-bar{background: #d08ba0;border-style: none;}
+.footer{position: fixed; left: 0;bottom: 0;}
