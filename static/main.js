@@ -9,7 +9,7 @@ if(res.length == 0){o.innerHTML = '<div style="color:red">No servers have been f
 for (i = 0, len = res.length, arr = res[i]; i < len; i++) { 
 var d = document.createElement('div');
 d.innerHTML = 
-`${i}: running '${arr.game}' ${arr.hostname}:${arr.port} `
+`${i}: running '${arr.game}' ${arr.hostname}:${arr.port} "${arr.title}"`
 if(sourceGames.indexOf(arr.game) !== -1){var a = document.createElement('a');a.innerHTML='(Join)';a.href=`steam://connect/${arr.hostname}:${arr.port}`;d.appendChild(a);};
 o.appendChild(d);
 }});

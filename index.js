@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = 8094;
 //let servers = [];
-let servers = [{"game":"srcTest","hostname":"127.0.0.1","port":"69","title":"redSrv"}];
+let servers = [];
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use((req, res, next) => {
