@@ -5,7 +5,12 @@ function main(){
 o = document.getElementById('out');
 GetApi()
 .then((res)=>{
-if(res.length == 0){o.innerHTML = '<div style="color:red">No servers have been found, or API is unreachable.</span>';};
+if(res.length == 0){
+let div = document.createElement('div');
+div.innerHTML = 'No servers have been found, or API is unreachable.';
+div.style.color = 'red';
+o.appendChild(div);
+};
 for (i = 0, len = res.length; i < len; i++) { 
 let arr = res[i];
 var d = document.createElement('div');
