@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const port = 8094;
-//let servers = [];
 let servers = [];
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
@@ -35,7 +34,7 @@ add/update server format example:
 */
 let n = Object.keys(servers).length + 1;
 let conf = ['game','hostname','port','title'];
-const c = new Object();
+let c = new Object();
 conf.forEach((key)=>{
     if(req.body[key] !== undefined){
         c[key] = req.body[key];
